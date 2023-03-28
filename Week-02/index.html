@@ -9,6 +9,7 @@
     <body>
         <header>
             <h1>MEGA ROCKET SA</h1>
+            <!--Here are the icons that will be added next week.-->
         </header>
         <main>
             <section>
@@ -69,16 +70,18 @@
             </section>
             <section>
                 <form>
-                    <h2>Leave us your inquiry</h2>
-                    <input type="text" placeholder="Nombre">
-                    <input type="text" placeholder="Apellido">
-                    <input type="text" placeholder="Email">
-                    <h3>Motive</h3>
-                    <label>Quiero conocer las membresías y costos<input type="checkbox" checked> </label>
-                    <label>Quiero realizar una consulta o sugerencia<input type="checkbox" > </label>
-                    <label>Quiero realizar un reclamo<input type="checkbox" > </label>
-                    <textarea rows="4" cols="50" placeholder="Comentarios"></textarea>
-                    <input type="button" value="Send">
+                    <fieldset>
+                        <h2>Leave us your inquiry</h2>
+                        <input type="text" placeholder="Name" id="name">
+                        <input type="text" placeholder="Last Name" id="lastname">
+                        <input type="text" placeholder="Email" id="email">
+                        <h3>Motive</h3>
+                        <label>I want to know about the memberships and costs.<input type="checkbox" name="motive" id="mc"> </label>
+                        <label>I want to make an inquiry or suggestion<input type="checkbox" name="motive" id="is" > </label>
+                        <label>I want to make a complaint<input type="checkbox" name="motive" id="c"> </label>
+                        <textarea rows="4" cols="50" placeholder="Comments"></textarea>
+                        <input type="button" value="Send">
+                    </fieldset>
                 </form>
             </section>
             <section>
