@@ -102,38 +102,44 @@
                 </article>
             </section>
             <section class="sections">
-                <form>
-                    <fieldset>
+                        <div class="firstform">
                         <h2>Leave us your inquiry</h2>
-                        <article class="datainquiry">
                             <input type="text" placeholder="Name" id="name">
                             <input type="text" placeholder="Last Name" id="lastname">
-                            <input type="text" placeholder="Email" id="email">
-                         </article>
-                        <h3>Motive</h3>
-                        <label>I want to know about the memberships and costs.<input type="checkbox" name="motive" id="mc"> </label>
-                        <label>I want to make an inquiry or suggestion<input type="checkbox" name="motive" id="is" > </label>
-                        <label>I want to make a complaint<input type="checkbox" name="motive" id="c"> </label>
+                            <input type="text" placeholder="Email" id="email"> 
+                        </div>
+                        <div class="motives">
+                            <h3>Motive</h3>
+                            <ul>
+                                <li class="motivos"><input type="checkbox" name="motive" id="mc" class="prueba"> 
+                                <label  class="prueba" for="mc">I want to know about the memberships and costs.</label></li>
+                                <li class="motivos"><input type="checkbox" name="motive" id="mc"> 
+                                <label>I want to make an inquiry or </label></li>
+                               <li class="motivos"> <input type="checkbox" name="motive" id="is" >
+                               <label>I want to make a complaint </label></li>   
+                            </ul>
+                        </div>
                         <textarea rows="4" cols="50" placeholder="Comments"></textarea>
-                        <input type="button" value="Send" id="send">
-                    </fieldset>
-                </form>
-            </section>
+                         <input type="button" value="Send" id="send">       
+                            </section>
             <section class="sections">
-                <h2>Activities</h2>
-                <ul>
-                    <li>Crossfit</li>
-                    <li>Spinning</li>
-                    <li>Boxing</li>
-                    <li>Bodybuilding</li>
-                </ul>
-                <h2>Black membership</h2>
-                <ul>
-                    <li>Free access to the weight training room</li>
-                    <li>Free access to classes without prior registration</li>
-                    <li>Personalized follow-up by a coach</li>
-                    <li>Grid display</li>
-                </ul>
+                <article class="firstmember">
+                    <h2>Activities</h2>
+                    <ul>
+                        <li>Crossfit</li>
+                        <li>Spinning</li>
+                        <li>Boxing</li>
+                        <li>Bodybuilding</li>
+                    </ul>
+                    <h2>Black membership</h2>
+                    <ul>
+                        <li>Free access to the weight training room</li>
+                        <li>Free access to classes without prior registration</li>
+                        <li>Personalized follow-up by a coach</li>
+                        <li>Grid display</li>
+                    </ul>
+                </article>
+                <article class="secondmember">
                 <h2>Classic membership</h2>
                 <ul>
                     <li>Free access to classes without prior registration</li>
@@ -145,9 +151,13 @@
                     <li>Free access to classes without prior registration</li>
                     <li>Grid display</li>
                 </ul>
+                </article>
             </section>
         </main>
         <footer>
+                  <img src="Assets/img/Vectorfooter.svg" alt="profile" class="footerpicture">
+                  <img src="Assets/img/Vectorfooter-1.svg" alt="login" class="footerpicture">
+                  <img src= "Assets/img/Vectorfooter-2.svg"alt="info" class="footerpicture">
             <p>© MEGA ROCKET SA 2023</p>
         </footer>
     </body>
