@@ -231,6 +231,11 @@ input {
   display: inline-block;
   vertical-align: top
 }
+
+.items{
+  color: #373867;
+  list-style-type:circle;
+}
 #facebook{
   margin-left:550px;
 }
