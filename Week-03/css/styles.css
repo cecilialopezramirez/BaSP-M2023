@@ -203,6 +203,38 @@ input {
   display: inline-block ;
   position:relative;
   margin-left: 10px;
-  right:50;
+  margin-bottom: 0;
+}
 
+.textfooter{
+  display: inline-block;
+  position: relative;
+  margin-left: 530px;
+  width: 100%;
+  
+}
+
+.first{
+  display: inline-block;
+}
+
+.second{
+  display: inline-block;
+}
+
+.third{
+  display: inline-block;
+  vertical-align: top
+}
+
+.fourth{
+  display: inline-block;
+  vertical-align: top
+}
+#facebook{
+  margin-left:550px;
+}
+
+footer{
+  margin-top: 10px;
 }
