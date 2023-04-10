@@ -6,13 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/reset.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="css/header.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <title>Mega Rocket</title>
     </head>
     <body>
         <header>
-            <img src="Assets/img/firsticon.svg" alt="menu" id="menu">
-            <h1>mega rocket sa</h1>
+            <div id="menu-and-h1">
+                <img src="Assets/img/firsticon.svg" alt="menu" id="presentation">
+                <h1>mega rocket</h1>
+             </div>
+            <h2 id="second-text-header">A FREE AND FULLY RESPONSIVE SITE TEMPLATE</h2>
             <nav>
                   <img src="Assets/img/Vectorhouse.svg" alt="home" class="icono">
                   <img src="Assets/img/Add User Maleadd.svg" alt="profile" class="icono" id="usermale">
@@ -21,9 +25,9 @@
               </nav>
         </header> 
         <main>
-            <section class="sections" id="firstsec">
-                <h2>Hi, I’m Mega Rocket Gym</h2>
-                <h3>A FREE AND FULLY RESPONSIVE SITE TEMPLATE</h3>
+            <section class="sections" id="first-sec">
+                <h2 class="text-presentation">Hi, I’m Mega Rocket Gym</h2>
+                <h3 class="second-title">A FREE AND FULLY RESPONSIVE SITE TEMPLATE</h3>
                 <p id="presentation">
                     Aenean ornare velit lacus, ac varius enim ullamcorper eu.
                     Proin aliquam facilisis ante interdum congue. Integer mollis,
@@ -33,49 +37,49 @@
                     Lorem ipsum dolor sit nullam.
                 </p>
                 <img  class="image" alt="Img" src="Assets/img/Rectangle 12image.svg">
-                <input type="button" value="LEARN MORE" id="learnmore">
+                <input type="button" value="LEARN MORE" id="learn-more">
             </section>
-            <section class="sections">
-                    <h2>Functions in the app</h2>
-                    <section class="firstsection">
-                    <article class="groupfun">
+            <section class="sections" id="second-sec">
+                    <h2 class="fun-titles">Functions in the app</h2>
+                    <section class="first-section">
+                    <article class="group-fun">
                     <img  id="image" alt="Img" src="Assets/img/🦆 icon _calendar check_calendar.svg" class="functions">
                         <div class="titleparagraph">
-                            <h3 class="funtitles">Appointment scheduling</h3>
-                            <p class="parafunctions">
+                            <h3 class="fun-titles">Appointment scheduling</h3>
+                            <p class="para-functions">
                                 Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.
                                 Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat 
                                 tempus aliquam.
                             </p>
                         </div>
                     </article>
-                    <article class="groupfun">
+                    <article class="group-fun">
                         <img  id="image" alt="Img" src="Assets/img/Vectorcalendar.svg" class="functions">
                         <div class="titleparagraph">
-                            <h3 class="funtitles">Viewing of schedule and availability</h3>
-                            <p class="parafunctions">
+                            <h3 class="fun-titles">Viewing of schedule and availability</h3>
+                            <p class="para-functions">
                                 Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.
                                 Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus 
                                 aliquam.
                             </p>
                         </div>
                     </article>
-                    <article class="groupfun">
+                    <article class="group-fun">
                         <img  id="image" alt="Img" src="Assets/img/Vectorgestmem.svg" class="functions">
                         <div class="titleparagraph">
-                            <h3 class="funtitles">Membership management</h3>
-                            <p class="parafunctions">
+                            <h3 class="fun-titles">Membership management</h3>
+                            <p class="para-functions">
                                 Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.
                                 Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus 
                                 aliquam.
                             </p>
                         </div>
                     </article>
-                    <article class="groupfun">
+                    <article class="group-fun">
                         <img  id="image" alt="Img" src="Assets/img/Vectorquestion.svg" class="functions">
                         <div class="titleparagraph">
-                            <h3 class="funtitles">Contact form and suggestions</h3>
-                            <p class="parafunctions">
+                            <h3 class="fun-titles">Contact form and suggestions</h3>
+                            <p class="para-functions">
                                 Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.
                                 Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus 
                                 aliquam.
@@ -85,9 +89,9 @@
                 </section>
             </section>
             <section class="sections">
-                <article class="abus">
-                <h2 class="aboutus">About us</h2>
-                <p class="aboutustext">
+                <article class="a-bus">
+                <h2 class="about-us">About us</h2>
+                <p class="about-us-text">
                     Lorem ipsum dolor sit accumsan interdum nisi
                     ,quis tincidunt felis sagittis eget. tempus euismod. 
                     Vestibulum ante ipsum primis in faucibus vestibulum. 
@@ -101,8 +105,8 @@
                 </p>
                 </article>
             </section>
-            <section class="sections">
-                        <div class="firstform">
+            <section class="sections" id="third-sec">
+                        <div class="first-form">
                         <h2>Leave us your inquiry</h2>
                             <input type="text" placeholder="Name" id="name">
                             <input type="text" placeholder="Last Name" id="lastname">
@@ -110,12 +114,12 @@
                         </div>
                         <div class="motives">
                             <h3>Motive</h3>
-                            <ul>
-                                <li class="motivos"><input type="checkbox" name="motive" id="mc" class="prueba"> 
-                                <label  for="mc">I want to know about the memberships and costs.</label></li>
-                                <li class="motivos"><input type="checkbox" name="motive" id="is"> 
+                            <ul class="list">
+                                <li class="reasons"><input type="checkbox" name="motive" id="mc"> 
+                                <label  for="mc">I want to know about the memberships</label></li>
+                                <li class="reasons"><input type="checkbox" name="motive" id="is"> 
                                 <label>I want to make an inquiry or suggestion </label></li>
-                               <li class="motivos"> <input type="checkbox" name="motive" id="c" >
+                               <li class="reasons"> <input type="checkbox" name="motive" id="c" >
                                <label>I want to make a complaint </label></li>   
                             </ul>
                         </div>
