@@ -70,7 +70,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("../assets/img/backgroundimage.svg") ;background-color:rgba(0, 0, 0, 0.15); 
+    text-align: center;
+    background-image: url("../Assets/img/backgroundimage.svg") ;background-color:rgba(0, 0, 0, 0.15); 
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center,center;
@@ -393,11 +394,35 @@
 
      .image{
       display:inline-flex;
-      margin-right: 2%;
+      margin-right: 4%;
+      width: 50%;
      }
 
      #landing-presentation{
       display: flex;
       margin-left: 7%;
+      width: 50%
     }
+    
+    .first-section{
+      display: flex;
+      flex-direction: row;
+    }
+
+    #second-section-title{
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin-left: 0;
+    }
+
+    .a-bus{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .about-us{
+      margin: 3%;
+    }
+
   }
