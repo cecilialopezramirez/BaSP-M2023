@@ -20,6 +20,7 @@
     font-family: roboto;
     color:#49A37B;
   }
+
   #menu-and-h1{
     display: inline-flex;
     justify-content: center;
@@ -27,8 +28,6 @@
     color: #49A37B;
     font-family: roboto;
   }
-
-
 
   #presentation{
     display:inline-flex;
@@ -71,7 +70,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url("../Assets/img/backgroundimage.svg") ;background-color:rgba(0, 0, 0, 0.15); 
+    background-image: url("https://raw.githubusercontent.com/cecilialopezramirez/BaSP-M2023/a0f792daa05540454466a527782ce2a7fe53193b/Week-04/Assets/img/backgroundimage.svg") ;background-color:rgba(0, 0, 0, 0.15); 
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center,center;
@@ -424,5 +423,61 @@
     .about-us{
       margin: 3%;
     }
+
+    #comments{
+      display: none;
+    }
+
+    #send{
+      display: none;
+    }
+
+    #comments-desktop{
+      display: flex;
+      margin-top: 2%;
+      margin-bottom: 2%;
+
+    }
+
+    #send-desktop{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2%;
+      width: 8%;
+      background: #AACE9B;
+      border-radius: 5px;
+      border-color: #AACE9B;
+    }
+
+    .first-form{
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    div.motives{
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 20%;
+      margin-bottom: 5%;
+      
+      }
+
+      .form-motives{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      #fourth-sec{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        border-bottom: 1px solid #000000;
+        border-top: 1px solid #000000;
+      }
 
   }
