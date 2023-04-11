@@ -34,6 +34,10 @@
     display:inline-flex;
   }
 
+  .tablet-image{
+    display: none;
+  }
+
   .h1{
     display: flex;
    
@@ -178,6 +182,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5%;
     }
 
     .reasons{
@@ -223,4 +228,111 @@
 
   .footer-picture{
     padding: 15px;
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+    #second-text-header{
+      display: none;
+    }
+
+    #menu-and-h1{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 10%;
+      text-transform: uppercase;
+      color: #49A37B;
+      font-family: roboto;
+    }
+
+    #first-sec{
+      display:flex ;
+      flex-direction: row;
+      justify-content: flex-start;
+      background-image:none; 
+      background-color: #FFFFFF;
+      font-family: roboto;
+      border-bottom: 1px solid #000000;
+    }
+
+    .tablet-presentation{
+      display: flex;
+      flex-direction:column;
+      width: 50%;
+    }
+    
+    #presentation{
+      display: flex;
+      position: absolute;
+      left: 0;
+      margin-top: 15px;
+      margin-left:10%;
+      
+      
+    }
+
+    #landing-presentation{
+      display: flex;
+      margin-left: 5%;
+    }
+    
+    .text-presentation{
+      color:#49A37B;
+    }
+
+    .second-title{
+      display: flex;
+    }
+
+    .tablet-image{
+      display: flex;
+    }
+
+    #second-sec{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #000000;
+      font-family: roboto;
+    }
+
+    .functions{
+      display: flex;
+      flex-direction: row;
+    }
+    .group-fun{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10%;
+      margin-right:10%;
+    }
+  
+    .fun-titles{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+      color: #49A37B;
+    }
+    .para-functions{
+      display: flex;
+      flex-direction: row;
+      
+    }
+
+    #fourth-sec{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid #000000;
+      border-top: 1px solid #000000;
+    }
+
+    .activities-title{
+      text-align: center;
+    }
   }
