@@ -83,11 +83,11 @@
   }
 
   #learn-more {
-    display: flex;
-    flex-direction: row;
     align-items: center;
+    text-align: center;
     padding: 12px;
     margin-bottom: 15px;
+    margin-right: 0;
     background: #FFFFFF;
     border: 1px solid #49A37B;
     border-radius: 5px;
