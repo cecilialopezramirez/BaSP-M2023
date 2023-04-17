@@ -33,7 +33,7 @@ console.log('Excercise 2.d');
 //nueva variable (utilizar substring, toUpperCase, toLowerCase y el operador +).
 
 var stringExD='Cornelia Street';
-var stringExDSubstr=stringExD.substring(0).toUpperCase()+stringExD.substring(1,stringExD.length).toLowerCase();
+var stringExDSubstr=stringExD.substring(0,1).toUpperCase()+stringExD.substring(1,stringExD.length).toLowerCase();
 
 console.log(stringExDSubstr);
 console.log('Excercise 2.e');
@@ -53,8 +53,8 @@ console.log('Excercise 2.f');
 //letras en minúscula (utilizar indexOf, substring, toUpperCase, toLowerCase y el operador +).
 
 var stringExF='Untouchable superstar';
-var exFResult=stringExF.substring(0).toUpperCase+stringExF.substring(1,stringExF.indexOf(' ')-1).toLowerCase()+
-stringExF.substring(stringExF.indexOf(' '),stringExF.indexOf(' '))+stringExF.substring(stringExF.indexOf
-    (' ')+1).toUpperCase()+stringExF.substring(stringExF.indexOf('uperstar')).toLowerCase();
+var exFResult=stringExF.substring(0,1).toUpperCase()+stringExF.substring(1,stringExF.indexOf(' ')).toLowerCase()+
+stringExF.substring(stringExF.indexOf(' '),stringExF.indexOf(' ')+1)+stringExF.substring(stringExF.indexOf
+(' ')+1,stringExF.indexOf(' ')+2).toUpperCase()+stringExF.substring(stringExF.indexOf('uperstar')).toLowerCase();
 
 console.log(exFResult);
