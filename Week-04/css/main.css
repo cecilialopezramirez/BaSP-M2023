@@ -1,17 +1,17 @@
- h2,h3{
+ h2,h3 {
     font-family: roboto;
     color:#49A37B;
   }
 
-  .tablet-image{
+  .tablet-image {
     display: none;
   }
 
-  .text-presentation{
+  .text-presentation {
     color: #000000;
   }
   
-  #first-sec{
+  #first-sec {
     display:flex ;
     flex-direction: column;
     justify-content: center;
@@ -25,7 +25,7 @@
     border-bottom: 1px solid #000000;
   }
 
-  .image{
+  .image {
     display: none;
   }
 
@@ -40,7 +40,7 @@
     border-radius: 5px;
   }
 
-  #second-sec{
+  #second-sec {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,30 +49,31 @@
     font-family: roboto;
   }
 
-  .second-title{
+  .second-title {
     display: none;
   }
 
-  .group-fun{
+  .group-fun {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .fun-titles{
+  .fun-titles {
     display: flex;
     justify-content: center;
     text-align: center;
     color: #49A37B;
   }
-  .para-functions{
+
+  .para-functions {
     display: flex;
     flex-direction: column;
     text-align: center;
   }
 
-  .a-bus{
+  .a-bus {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -80,11 +81,11 @@
     font-family: roboto;
   }
 
-  .about-us{
+  .about-us {
     color: #49A37B;
   }
 
-  #third-sec{
+  #third-sec {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,18 +94,18 @@
     font-family: roboto;
   }
 
-  .first-form{
+  .first-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
   }
 
-  #send-desktop,#comments-desktop{
+  #send-desktop,#comments-desktop {
     display: none;
   }
 
-  #comments{
+  #comments {
     display: block;
     flex-direction: row;
     justify-content: center;
@@ -113,7 +114,7 @@
     width: 100%;
   }
 
-  #send{
+  #send {
     width: 30%;
     flex: 0 0 20%;
     align-items: center;
@@ -126,18 +127,18 @@
     border-color: #AACE9B;
   }
 
-  #reason-title{
+  #reason-title {
     font-size: 1.5em;
   }
 
-  div.motives{
+  div.motives {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 5%;
     }
 
-    .reasons{
+    .reasons {
       justify-content: center;
       list-style-type:none;  
     }
@@ -148,12 +149,12 @@
     margin-top: 30px;
   }
 
-  .list{
+  .list {
     padding-inline-start: 0px;
     color: #373867;
   }
 
-  #fourth-sec{
+  #fourth-sec {
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -161,14 +162,14 @@
     border-top: 1px solid #000000;
   }
 
-  .items{
+  .items {
     color: #373867;
     list-style-type:circle;
   }
 
   @media only screen and (min-width: 601px)  {
 
-    #first-sec{
+    #first-sec {
       display:flex ;
       flex-direction: row;
       justify-content: flex-start;
@@ -178,26 +179,26 @@
       border-bottom: 1px solid #000000;
     }
 
-    .tablet-presentation{
+    .tablet-presentation {
       display: flex;
       flex-direction:column;
       width: 50%;
     }
     
-    #landing-presentation{
+    #landing-presentation {
       display: flex;
       margin-left: 5%;
     }
     
-    .text-presentation{
+    .text-presentation {
       color:#49A37B;
     }
 
-    .second-title{
+    .second-title {
       display: flex;
     }
 
-    .tablet-image{
+    .tablet-image {
       display: flex;
       width: 100%;
       height: auto;
@@ -206,7 +207,7 @@
       padding: 4%;
     }
 
-    #second-sec{
+    #second-sec {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -215,11 +216,11 @@
       font-family: roboto;
     }
 
-    .functions{
+    .functions {
       display: flex;
       flex-direction: row;
     }
-    .group-fun{
+    .group-fun {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -228,26 +229,26 @@
       margin-right:10%;
     }
   
-    .fun-titles{
+    .fun-titles {
       display: flex;
       flex-direction: row;
       justify-content: center;
       text-align: center;
       color: #49A37B;
     }
-    .para-functions{
+    .para-functions {
       display: flex;
       flex-direction: row;
       
     }
     
-    #second-section-title{
+    #second-section-title {
       align-items: center;
       text-align: center;
       margin-left:12%;
     }
 
-    #fourth-sec{
+    #fourth-sec {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -255,65 +256,65 @@
       border-top: 1px solid #000000;
     }
 
-    .activities-title{
+    .activities-title {
       text-align: center;
     }
   }
 
   @media only screen and (min-width: 1025px)  {
-     .tablet-image{
+     .tablet-image {
       display: none;
      }
 
-     .image{
+     .image {
       display:inline-flex;
       margin-right: 4%;
       width: 50%;
      }
 
-     #landing-presentation{
+     #landing-presentation {
       display: flex;
       margin-left: 7%;
       width: 50%
     }
     
-    .first-section{
+    .first-section {
       display: flex;
       flex-direction: row;
     }
 
-    #second-section-title{
+    #second-section-title { 
       display: flex;
       align-items: center;
       text-align: center;
       margin-left: 0;
     }
 
-    .a-bus{
+    .a-bus {
       display: flex;
       flex-direction: row;
     }
 
-    .about-us{
+    .about-us {
       margin: 3%;
     }
 
-    #comments{
+    #comments {
       display: none;
     }
 
-    #send{
+    #send {
       display: none;
     }
 
-    #comments-desktop{
+    #comments-desktop {
       display: flex;
       margin-top: 2%;
       margin-bottom: 2%;
 
     }
 
-    #send-desktop{
+    #send-desktop {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -324,14 +325,14 @@
       border-color: #AACE9B;
     }
 
-    .first-form{
+    .first-form {
       display: inline-flex;
       flex-direction: column;
       justify-content: center;
       text-align: center;
     }
 
-    div.motives{
+    div.motives {
       display: inline-flex;
       flex-direction: column;
       align-items: center;
@@ -340,13 +341,13 @@
       
       }
 
-      .form-motives{
+      .form-motives {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
       }
 
-      #fourth-sec{
+      #fourth-sec {
         display: flex;
         flex-direction: row;
         align-items: baseline;
