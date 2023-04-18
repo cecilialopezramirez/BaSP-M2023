@@ -6,9 +6,7 @@ footer {
 }
 
 .footer-pictures {
-    flex-direction: row;
-    margin-top: 5%;
-    
+    margin-top: 5%;  
 }
 
 .footer-picture {
