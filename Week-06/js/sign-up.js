@@ -39,7 +39,6 @@ passwordSignUp.onfocus = function () {
     var password= passwordSignUp.value;
     var hasLetter = false;
     var hasNumber = false;
-    console.log(password);
     for (var i = 0; i < password.length; i++) {
         var char = password.charAt(i);
             if (char >= "0" && char <= "9") {
@@ -63,6 +62,24 @@ passwordSignUp.onfocus = function () {
     }
     
 })
+
+//Repeat Password
+
+repeatSignUp.onfocus = function () {
+    errorRepeat.classList.remove("message");
+    errorRepeat.classList.add("errors");
+  };
+
+
+repeatSignUp.addEventListener('blur',function() {
+    var repeat= repeatSignUp.value;
+    if(repeat !== passwordSignUp.value){
+        errorRepeat.classList.remove("errors");
+        errorRepeat.classList.add("message");
+        errorRepeat.textContent =
+          "The passwords do not match";
+    }
+});
 
 //Email
 
@@ -244,6 +261,76 @@ postalSignUp.onfocus = function () {
         errorCode.textContent = "This field must only contain numbers and must have between 4 and 5 digits";
     }
           
+})
+
+//Direccion
+addressSignUp.onfocus = function () {
+    errorAddress.classList.remove("message");
+    errorAddress.classList.add("errors");
+  };
+
+
+  addressSignUp.addEventListener('blur',function() {
+    var address= addressSignUp.value;
+    var hasLetter = false;
+    var hasNumber = false;
+    var hasSpace=false;
+    for (var i = 0; i < address.length; i++) {
+        var char = address.charAt(i);
+            if (char >= "0" && char <= "9") {
+            hasNumber = true;
+        } else if ((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z')) {
+            hasLetter=true;   
+        } else if (char === ' ') {
+            hasSpace = true;
+        }
+    }
+    if (!hasLetter || !hasNumber || !hasSpace) {
+        errorAddress.classList.remove("errors");
+        errorAddress.classList.add("message");
+        errorAddress.textContent =
+          "This field must have letters, numbers, and a space in between.";
+    }
+
+    if (address.length < 5 ) {
+        errorAddress.classList.remove("errors");
+        errorAddress.classList.add("message");
+        errorAddress.textContent += " This field must have at least 5 characters";
+    }
+    
+})
+
+//Localidad
+
+citySignUp.onfocus = function () {
+    errorCity.classList.remove("message");
+    errorCity.classList.add("errors");
+  };
+
+
+  citySignUp.addEventListener('blur',function() {
+    var city= citySignUp.value;
+    var cityValid = true;
+    for (var i = 0; i < city.length; i++) {
+        var carNumb = city.charCodeAt(i);
+        if ((carNumb >= 33 && carNumb <= 47) || (carNumb >= 58 && carNumb <= 64) || (carNumb >= 91 && carNumb <= 96) || (carNumb >= 123 && carNumb <= 126)) {
+          cityValid=false;
+        }
+    }
+    
+    if(!cityValid){
+        errorCity.classList.remove("errors");
+        errorCity.classList.add("message");
+        errorCity.textContent=
+        "This field should only contain letters and numbers"
+    }
+
+    if (city.length < 3 ) {
+        errorCity.classList.remove("errors");
+        errorCity.classList.add("message");
+        errorCity.textContent += " This field must have more than three characters";
+    }
+        
 })
 
 }

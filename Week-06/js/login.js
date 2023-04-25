@@ -20,12 +20,11 @@ passwordLogIn.onfocus = function () {
     errorPassword.classList.add("errors");
   };
 
-
-  passwordLogIn.addEventListener('blur',function() {
-    var password= passwordLogIn.value;
+var errors=[];
+function isPassWordvalid() {
+  var password= passwordLogIn.value;
     var hasLetter = false;
     var hasNumber = false;
-    console.log(password);
     for (var i = 0; i < password.length; i++) {
         var char = password.charAt(i);
             if (char >= "0" && char <= "9") {
@@ -40,22 +39,28 @@ passwordLogIn.onfocus = function () {
         errorPassword.classList.add("message");
         errorPassword.textContent =
           "This field needs at least one letter, and at least one number";
+        }
+        if (password.length < 8 || password.length >30) {
+          errorPassword.classList.remove("errors");
+          errorPassword.classList.add("message");
+          errorPassword.textContent += " This field needs to have between 8 and 30 characters";
+          
     }
-    if (password.length < 8 || password.length >30) {
-      errorPassword.classList.remove("errors");
-      errorPassword.classList.add("message");
-      errorPassword.textContent += " This field needs to have between 8 and 30 characters";
+    if(errors.includes(errorPassword.textContent)){
+      
     }
-  
     
-})
+console.log(errors)
+}
+
+  passwordLogIn.addEventListener('blur', isPassWordvalid)
 
 emailLogIn.onfocus = function () {
     errorEmail.classList.remove("message");
     errorEmail.classList.add("errors");
   };
 
-emailLogIn.addEventListener('blur',function(){
+emailLogIn.addEventListener('blur', function(){
     var email= emailLogIn.value;
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     var emailValid=false;
@@ -71,8 +76,19 @@ emailLogIn.addEventListener('blur',function(){
         errorEmail.textContent=
         "The email format is not valid"
     }
-    
+  if(emailValid===true){
+    return true
+  }else{
+    return false
+  }
 })
+
+
+var textAlertErrors = [
+  errorEmail.textContent,
+  errorPassword.textContent,
+]
+
 
 }
 
