@@ -40,7 +40,13 @@ passwordLogIn.onfocus = function () {
         errorPassword.classList.add("message");
         errorPassword.textContent =
           "This field needs at least one letter, and at least one number";
-      }
+    }
+    if (password.length < 8 || password.length >30) {
+      errorPassword.classList.remove("errors");
+      errorPassword.classList.add("message");
+      errorPassword.textContent += " This field needs to have between 8 and 30 characters";
+    }
+  
     
 })
 
