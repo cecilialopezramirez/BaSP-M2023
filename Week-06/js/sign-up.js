@@ -34,34 +34,40 @@ passwordSignUp.onfocus = function () {
     errorPassword.classList.add("errors");
   };
 
-
-  passwordSignUp.addEventListener('blur',function() {
-    var password= passwordSignUp.value;
+  passwordSignUp.addEventListener("blur", isPassWordValid);
+  
+  function isPassWordValid() {
+    var password = passwordSignUp.value;
     var hasLetter = false;
     var hasNumber = false;
     for (var i = 0; i < password.length; i++) {
-        var char = password.charAt(i);
-            if (char >= "0" && char <= "9") {
-            hasNumber = true;
-        } else if ((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z')) {
-            hasLetter=true; 
-            
-        }
+      var char = password.charAt(i);
+      if (char >= "0" && char <= "9") {
+        hasNumber = true;
+      } else if ((char >= "a" && char <= "z") || (char >= "A" && char <= "Z")) {
+        hasLetter = true;
+      }
     }
     if (!hasLetter || !hasNumber) {
-        errorPassword.classList.remove("errors");
-        errorPassword.classList.add("message");
-        errorPassword.textContent =
-          "This field needs at least one letter, and at least one number";
+      errorPassword.classList.remove("errors");
+      errorPassword.classList.add("message");
+      errorPassword.textContent =
+        "This field needs at least one letter, and at least one number \n";
+    }
+    if (password.length < 8 || password.length > 30) {
+      errorPassword.classList.remove("errors");
+      errorPassword.classList.add("message");
+      errorPassword.textContent +=
+        "This field needs to have between 8 and 30 characters \n";
     }
 
-    if (password.length < 8 || password.length >30) {
-        errorPassword.classList.remove("errors");
-        errorPassword.classList.add("message");
-        errorPassword.textContent += " This field needs to have between 8 and 30 characters";
-    }
-    
-})
+    return !(
+      !hasLetter ||
+      !hasNumber ||
+      password.length < 8 ||
+      password.length > 30
+    );
+  }
 
 //Repeat Password
 
@@ -70,16 +76,20 @@ repeatSignUp.onfocus = function () {
     errorRepeat.classList.add("errors");
   };
 
+repeatSignUp.addEventListener("blur", isRepeatValid);
 
-repeatSignUp.addEventListener('blur',function() {
+function isRepeatValid() {
     var repeat= repeatSignUp.value;
     if(repeat !== passwordSignUp.value){
         errorRepeat.classList.remove("errors");
         errorRepeat.classList.add("message");
         errorRepeat.textContent =
-          "The passwords do not match";
+          "The passwords do not match \n";
     }
-});
+return !(
+    repeat !== passwordSignUp.value
+)
+};
 
 //Email
 
@@ -88,24 +98,24 @@ emailSignUp.onfocus = function () {
     errorEmail.classList.add("errors");
   };
 
-emailSignUp.addEventListener('blur',function(){
-    var email= emailSignUp.value;
+emailSignUp.addEventListener("blur", isEmailValid);
+
+function isEmailValid() {
+    var email = emailSignUp.value;
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    var emailValid=false;
-    if (email.match(emailExpression)) {
-      emailValid=true;
-    } else {
-      emailValid=false;
+    var emailValid = emailExpression.test(email);
+
+    if (!emailValid) {
+      errorEmail.classList.remove("errors");
+      errorEmail.classList.add("message");
+      errorEmail.textContent = "The email format is not valid \n";
     }
 
-    if(!emailValid){
-        errorEmail.classList.remove("errors");
-        errorEmail.classList.add("message");
-        errorEmail.textContent=
-        "The email format is not valid"
-    }
-    
-})
+    return emailValid;
+  }
+
+
+
 
 //Nombre
 
@@ -114,8 +124,9 @@ nameSignUp.onfocus = function () {
     errorName.classList.add("errors");
   };
 
+  nameSignUp.addEventListener("blur", isNameValid);
 
-  nameSignUp.addEventListener('blur',function() {
+  function isNameValid() {
     var name= nameSignUp.value;
     var nameValid = false;
     for (var i = 0; i < name.length; i++) {
@@ -131,16 +142,22 @@ nameSignUp.onfocus = function () {
         errorName.classList.remove("errors");
         errorName.classList.add("message");
         errorName.textContent=
-        "This field should only contain letters"
+        "This field should only contain letters \n"
     }
 
     if (name.length < 3 || name.length > 20) {
         errorName.classList.remove("errors");
         errorName.classList.add("message");
-        errorName.textContent += " This field needs to have between 3 and 20 characters";
+        errorName.textContent += " This field needs to have between 3 and 20 characters \n";
     }
+
+    return !(
+        !nameValid ||
+        name.length < 3 ||
+        name.length > 20
+      );
         
-})
+}
 
 //Apellido
 
@@ -149,8 +166,9 @@ lastSignUp.onfocus = function () {
     errorLastName.classList.add("errors");
 };
 
+lastSignUp.addEventListener("blur", isLastValid);
 
-  lastSignUp.addEventListener('blur',function() {
+  function isLastValid() {
     var name= lastSignUp.value;
     var lastNameValid = false;
     for (var i = 0; i < name.length; i++) {
@@ -166,16 +184,21 @@ lastSignUp.onfocus = function () {
         errorLastName.classList.remove("errors");
         errorLastName.classList.add("message");
         errorLastName.textContent=
-        "This field should only contain letters"
+        "This field should only contain letters \n"
     }
 
     if (name.length < 3 || name.length > 20) {
         errorLastName.classList.remove("errors");
         errorLastName.classList.add("message");
-        errorLastName.textContent += " This field needs to have between 3 and 20 characters";
+        errorLastName.textContent += " This field needs to have between 3 and 20 characters \n";
     }
-        
-})
+   
+    return !(
+        !lastNameValid ||
+        name.length < 3 ||
+        name.length > 20
+      );     
+}
 
 //DNI
 
@@ -184,8 +207,9 @@ dniSignUp.onfocus = function () {
     errorDNI.classList.add("errors");
 };
 
+dniSignUp.addEventListener("blur", isDniValid);
 
-  dniSignUp.addEventListener('blur',function() {
+function isDniValid() {
     var dni= dniSignUp.value;
     var dniValid = false;
     
@@ -200,10 +224,13 @@ dniSignUp.onfocus = function () {
     if (!dniValid || dni.length < 8) {
         errorDNI.classList.remove("errors");
         errorDNI.classList.add("message");
-        errorDNI.textContent = "This field must only contain numbers and must have more than 7 digits";
+        errorDNI.textContent = "This field must only contain numbers and must have more than 7 digits \n";
     } 
-        
-})
+    return !(
+        !dniValid ||
+        dni.length < 8
+      ) ;       
+}
 
 //Telefono
 
@@ -212,8 +239,9 @@ phoneSignUp.onfocus = function () {
     errorPhone.classList.add("errors");
 };
 
+phoneSignUp.addEventListener("blur", isPhoneValid);
 
-  phoneSignUp.addEventListener('blur',function() {
+  function isPhoneValid() {
     var phone= phoneSignUp.value;
     var phoneValid = false;
     
@@ -229,10 +257,14 @@ phoneSignUp.onfocus = function () {
     if (!phoneValid || phone.length !== 10) {
         errorPhone.classList.remove("errors");
         errorPhone.classList.add("message");
-        errorPhone.textContent = "This field must only contain numbers and must have exactly 10 digits";
+        errorPhone.textContent = "This field must only contain numbers and must have exactly 10 digits \n";
     }
-          
-})
+
+    return !(
+        !phoneValid ||
+        phone.length !== 10
+    ) ;       
+}
 
 //Codigo postal
 
@@ -241,8 +273,9 @@ postalSignUp.onfocus = function () {
     errorCode.classList.add("errors");
 };
 
+postalSignUp.addEventListener("blur", isPostalValid);
 
-  postalSignUp.addEventListener('blur',function() {
+function isPostalValid() {
     var postal= postalSignUp.value;
     var postalValid = false;
     
@@ -258,10 +291,14 @@ postalSignUp.onfocus = function () {
     if (!postalValid || postal.length < 4 || postal.length > 5) {
         errorCode.classList.remove("errors");
         errorCode.classList.add("message");
-        errorCode.textContent = "This field must only contain numbers and must have between 4 and 5 digits";
+        errorCode.textContent = "This field must only contain numbers and must have between 4 and 5 digits \n";
     }
-          
-})
+    return !(
+        !postalValid ||
+        postal.length < 4||
+        postal.length > 5
+    ) ;        
+}
 
 //Direccion
 addressSignUp.onfocus = function () {
@@ -269,8 +306,9 @@ addressSignUp.onfocus = function () {
     errorAddress.classList.add("errors");
   };
 
+addressSignUp.addEventListener("blur", isAddressValid);
 
-  addressSignUp.addEventListener('blur',function() {
+function isAddressValid() {
     var address= addressSignUp.value;
     var hasLetter = false;
     var hasNumber = false;
@@ -289,16 +327,21 @@ addressSignUp.onfocus = function () {
         errorAddress.classList.remove("errors");
         errorAddress.classList.add("message");
         errorAddress.textContent =
-          "This field must have letters, numbers, and a space in between.";
+          "This field must have letters, numbers, and a space in between.\n";
     }
 
     if (address.length < 5 ) {
         errorAddress.classList.remove("errors");
         errorAddress.classList.add("message");
-        errorAddress.textContent += " This field must have at least 5 characters";
+        errorAddress.textContent += " This field must have at least 5 characters\n";
     }
-    
-})
+    return !(
+        !hasLetter ||
+         !hasNumber ||
+        !hasSpace ||
+        address.length < 5 
+    ) ;       
+}
 
 //Localidad
 
@@ -307,8 +350,9 @@ citySignUp.onfocus = function () {
     errorCity.classList.add("errors");
   };
 
+citySignUp.addEventListener("blur", isCityValid);
 
-  citySignUp.addEventListener('blur',function() {
+function isCityValid() {
     var city= citySignUp.value;
     var cityValid = true;
     for (var i = 0; i < city.length; i++) {
@@ -322,16 +366,19 @@ citySignUp.onfocus = function () {
         errorCity.classList.remove("errors");
         errorCity.classList.add("message");
         errorCity.textContent=
-        "This field should only contain letters and numbers"
+        "This field should only contain letters and numbers\n"
     }
 
     if (city.length < 3 ) {
         errorCity.classList.remove("errors");
         errorCity.classList.add("message");
-        errorCity.textContent += " This field must have more than three characters";
+        errorCity.textContent += " This field must have more than three characters \n";
     }
-        
-})
+    return !(
+        !cityValid ||
+        city.length < 3 
+    ) ;      
+}
 
 }
 
