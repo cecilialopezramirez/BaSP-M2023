@@ -49,3 +49,12 @@ h2{
 label {
     display: inline-block;
 }
+
+.errors {
+    display: none;
+}
+
+.message {
+    display: block;
+    color: red;
+  }

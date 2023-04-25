@@ -10,6 +10,7 @@
         <link href="../css/header.css" rel="stylesheet">
         <link href="../css/login.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="../css/footer.css">
+        <script src="../js/login.js"></script>
 </head>
 <body>
     <header>
@@ -26,10 +27,12 @@
           </nav>
     </header> 
     <main>
-        <form class="firstForm">
+        <form class="firstForm" id="formLogIn">
             <h2>Sign In</h2>
-            <input type="text" placeholder="Email" class="formLogin">
-            <input type="password" placeholder="Password" class="formLogin">
+            <input type="text" placeholder="Email" class="formLogin" id="emailLogIn">
+            <span class='errors' id="errorEmail">Invalid email</span>
+            <input type="password" placeholder="Password" class="formLogin" id="passwordLogIn">
+            <span class='errors' id="errorPassword">Invalid password</span>
             <label><input type="checkbox" value="Remember me" class="formLogin">Remember me</label>
             <a href=""  class="formLogin">Forgot password? Get help</a>
             <input type="button" value="Continue" class="formLogin" id="button">
