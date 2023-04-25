@@ -1,5 +1,5 @@
 window.onload=function(){
-console.log('hola')
+
 var formLogIn = document.getElementById('formLogIn'); 
 
 //variables de input 

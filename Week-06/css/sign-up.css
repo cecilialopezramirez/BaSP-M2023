@@ -43,3 +43,13 @@ input[type="date"] {
     border-color: #49A37B; 
     color: aliceblue;
 }
+
+.errors {
+    display: none;
+}
+
+.message {
+    display: block;
+    color: red;
+    font-family: Roboto;
+  }
