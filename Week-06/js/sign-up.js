@@ -28,6 +28,9 @@ var errorCode= document.getElementById('errorCode');
 var errorDate= document.getElementById('errorDate'); 
 var errorRepeat= document.getElementById('errorRepeat'); 
 
+ //boton
+ var button = document.getElementById("buttonSU");
+
 //Password
 passwordSignUp.onfocus = function () {
     errorPassword.classList.remove("message");
@@ -379,6 +382,45 @@ function isCityValid() {
         city.length < 3 
     ) ;      
 }
+
+//Fecha
+
+dateSignUp.onfocus = function () {
+    errorDate.classList.remove("message");
+    errorDate.classList.add("errors");
+};
+
+dateSignUp.addEventListener("blur", isDateValid);
+  
+function isDateValid() {
+    var date = Date.parse(dateSignUp.value);
+    var dateValid = true;
+   
+    if (isNaN(date)) {
+      dateValid = false;
+      errorDate.classList.remove("errors");
+      errorDate.classList.add("message");
+      errorDate.textContent += "The format of the date is not valid \n";
+    }
+  
+
+  }
+  
+  button.addEventListener("click", function () {
+    if (isEmailValid() && isPassWordValid() && isRepeatValid() && isAddressValid() && isCityValid()
+    && isDniValid() && isLastValid() && isNameValid() && isPhoneValid() && isPostalValid()) {
+      alert((`Name: ${nameSignUp.value} Last Name: ${lastSignUp.value} Dni: ${dniSignUp.value}
+      Phone number: ${phoneSignUp.value} City: ${citySignUp.value} Address: ${addressSignUp.value}
+      Postal code: ${postalSignUp.value} 
+      Email: ${emailSignUp.value} Password: ${passwordSignUp.value}
+      Repeat password: ${repeatSignUp.value} `));
+    } else {
+      var errors = errorEmail.textContent + errorPassword.textContent + errorAddress.textContent
+      + errorCity.textContent + errorCode.textContent + errorRepeat.textContent + errorDNI.textContent 
+      + errorLastName.textContent + errorName.textContent +errorPhone.textContent;
+      alert(errors);
+    }
+  });
 
 }
 

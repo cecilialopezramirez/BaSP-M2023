@@ -19,7 +19,7 @@ window.onload = function () {
   };
 
   passwordLogIn.addEventListener("blur", isPassWordValid);
-  
+
   function isPassWordValid() {
     var password = passwordLogIn.value;
     var hasLetter = false;
@@ -71,7 +71,7 @@ window.onload = function () {
 
   button.addEventListener("click", function () {
     if (isEmailValid() && isPassWordValid()) {
-      alert("Todo es válido");
+      alert(alert(`Email: ${emailLogIn.value} Password: ${passwordLogIn.value}`));
     } else {
       var errors = errorEmail.textContent + errorPassword.textContent;
       alert(errors);
