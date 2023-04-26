@@ -31,6 +31,7 @@ var errorRepeat= document.getElementById('errorRepeat');
  //boton
  var button = document.getElementById("buttonSU");
 
+
 //Password
 passwordSignUp.onfocus = function () {
     errorPassword.classList.remove("message");
@@ -421,6 +422,8 @@ function isDateValid() {
       alert(errors);
     }
   });
+
+ 
 
 }
 
