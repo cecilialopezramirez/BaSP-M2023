@@ -20,5 +20,8 @@ You can see the results by following these links:
 https://cecilialopezramirez.github.io/BaSP-M2023/Week-04/index.html
 https://cecilialopezramirez.github.io/BaSP-M2023/Week-05/index.html
 
+## Week 06
+The task for this week consisted of creating a screenflow between the landing page corresponding to week 4 and the login and sign up pages that we had to design this week. In addition, we had to validate each field of each form using JavaScript
+
 ## Authors
 - Cecilia López
