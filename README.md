@@ -23,5 +23,8 @@ https://cecilialopezramirez.github.io/BaSP-M2023/Week-05/index.html
 ## Week 06
 The task for this week consisted of creating a screenflow between the landing page corresponding to week 4 and the login and sign up pages that we had to design this week. In addition, we had to validate each field of each form using JavaScript
 
+## Week 07
+For problem 07, we had to continue working on what was developed in the previous problem. To do this, a copy of the "Week-06" folder had to be made and renamed to "Week-07". Inside this folder, the forms from week 06 had to be extended so that when the confirmation buttons were pressed, the data loaded in them could be sent to a web server using an HTTP request from JavaScript.
+
 ## Authors
 - Cecilia López

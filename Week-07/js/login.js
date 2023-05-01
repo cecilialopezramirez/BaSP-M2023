@@ -71,7 +71,10 @@ window.onload = function () {
 
   button.addEventListener("click", function () {
     if (isEmailValid() && isPassWordValid()) {
-      alert(alert(`Email: ${emailLogIn.value} Password: ${passwordLogIn.value}`));
+      var email = emailLogIn.value;
+      var password = passwordLogIn.value;
+      alert(`Email: ${emailLogIn.value} Password: ${passwordLogIn.value}`);
+      var url='https://api-rest-server.vercel.app/login'+email
     } else {
       var errors = errorEmail.textContent + errorPassword.textContent;
       alert(errors);
@@ -84,4 +87,6 @@ window.onload = function () {
   };
 
   emailLogIn.addEventListener("blur", isEmailValid);
+
+  //
 };
