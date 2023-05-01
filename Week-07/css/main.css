@@ -1,0 +1,357 @@
+ h2,h3 {
+    font-family: roboto;
+    color:#49A37B;
+  }
+
+  .tablet-image {
+    display: none;
+  }
+
+  .text-presentation {
+    color: #000000;
+  }
+  
+  #first-sec {
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("https://raw.githubusercontent.com/cecilialopezramirez/BaSP-M2023/a0f792daa05540454466a527782ce2a7fe53193b/Week-04/Assets/img/backgroundimage.svg") ;background-color:rgba(0, 0, 0, 0.15); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center,center;
+    font-family: roboto;
+    border-bottom: 1px solid #000000;
+  }
+
+  .image {
+    display: none;
+  }
+
+  #learn-more {
+    align-items: center;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 15px;
+    margin-right: 0;
+    background: #FFFFFF;
+    border: 1px solid #49A37B;
+    border-radius: 5px;
+  }
+
+  #second-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #000000;
+    font-family: roboto;
+  }
+
+  .second-title {
+    display: none;
+  }
+
+  .group-fun {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fun-titles {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #49A37B;
+  }
+
+  .para-functions {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .a-bus {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+    font-family: roboto;
+  }
+
+  .about-us {
+    color: #49A37B;
+  }
+
+  #third-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: roboto;
+  }
+
+  .first-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #send-desktop,#comments-desktop {
+    display: none;
+  }
+
+  #comments {
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 5%;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  #send {
+    width: 30%;
+    margin-top: 15px;
+    margin-left: 35%;
+    padding: 10px 24px;
+    background: #AACE9B;
+    border-radius: 5px;
+    border-color: #AACE9B;
+  }
+
+  #reason-title {
+    font-size: 1.5em;
+  }
+
+  div.motives {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+    }
+
+    .reasons {
+      justify-content: center;
+      list-style-type:none;  
+    }
+
+  input[type="text" i] {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .list {
+    padding-inline-start: 0px;
+    color: #373867;
+  }
+
+  #fourth-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
+  }
+
+  .items {
+    color: #373867;
+    list-style-type:circle;
+  }
+
+  @media only screen and (min-width: 601px)  {
+
+    #first-sec {
+      display:flex ;
+      flex-direction: row;
+      justify-content: flex-start;
+      background-image:none; 
+      background-color: #FFFFFF;
+      font-family: roboto;
+      border-bottom: 1px solid #000000;
+    }
+
+    .tablet-presentation {
+      display: flex;
+      flex-direction:column;
+      width: 50%;
+    }
+    
+    #landing-presentation {
+      display: flex;
+      margin-left: 5%;
+    }
+    
+    .text-presentation {
+      color:#49A37B;
+    }
+
+    .second-title {
+      display: flex;
+    }
+
+    .tablet-image {
+      display: flex;
+      width: 100%;
+      height: auto;
+      margin-right: 3%;
+      margin-top:3%;
+      padding: 4%;
+    }
+
+    #second-sec {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #000000;
+      font-family: roboto;
+    }
+
+    .functions {
+      display: flex;
+      flex-direction: row;
+    }
+    .group-fun {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10%;
+      margin-right:10%;
+    }
+  
+    .fun-titles {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+      color: #49A37B;
+    }
+    .para-functions {
+      display: flex;
+      flex-direction: row;
+      
+    }
+    
+    #second-section-title {
+      align-items: center;
+      text-align: center;
+      margin-left:12%;
+    }
+
+    #fourth-sec {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid #000000;
+      border-top: 1px solid #000000;
+    }
+
+    .activities-title {
+      text-align: center;
+    }
+  }
+
+  @media only screen and (min-width: 1025px)  {
+     .tablet-image {
+      display: none;
+     }
+
+     .image {
+      display:inline-flex;
+      margin-right: 4%;
+      width: 50%;
+     }
+
+     #landing-presentation {
+      display: flex;
+      margin-left: 7%;
+      width: 50%
+    }
+    
+    .first-section {
+      display: flex;
+      flex-direction: row;
+    }
+
+    #second-section-title { 
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin-left: 0;
+    }
+
+    .a-bus {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .about-us {
+      margin: 3%;
+    }
+
+    #comments {
+      display: none;
+    }
+
+    #send {
+      display: none;
+    }
+
+    #comments-desktop {
+      display: flex;
+      margin-top: 2%;
+      margin-bottom: 2%;
+
+    }
+
+    #send-desktop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2%;
+      width: 8%;
+      background: #AACE9B;
+      border-radius: 5px;
+      border-color: #AACE9B;
+    }
+
+    .first-form {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    div.motives {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 20%;
+      margin-bottom: 5%;
+      
+      }
+
+      .form-motives {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      #fourth-sec {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-bottom: 1px solid #000000;
+        border-top: 1px solid #000000;
+      }
+
+  }

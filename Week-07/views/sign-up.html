@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Rocket</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="../css/header.css" rel="stylesheet">
+        <link href="../css/sign-up.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../css/footer.css">
+        <script src="../js/sign-up.js"></script>
+</head>
+<body>
+    <header>
+        <div id="menu-and-h1">
+            <img src="../../assets/imgs/firsticon.svg" alt="menu" id="presentation">
+            <h1>mega rocket</h1>
+         </div>
+        <h2 id="second-text-header">A FREE AND FULLY RESPONSIVE SITE TEMPLATE</h2>
+        <nav>
+            <a href="../views/index.html"><img src="../../assets/imgs/Vectorhouse.svg" alt="home" class="icono"></a>
+            <a href="../views/sign-up.html"><img src="../../assets/imgs/Add User Maleadd.svg" alt="profile" class="icono" id="usermale"></a>
+            <a href="../views/login.html"><img src="../../assets/imgs/loginnnnnnn.svg" alt="login" class="icono"></a>
+            <a href=""><img src="../../assets/imgs/Vectorinfo.svg" alt="info" class="icono"></a>
+          </nav>
+    </header> 
+    <main>
+        <form class="firstForm">
+            <h2>Register</h2>
+            <div class="divsSU">
+                <input type="text" placeholder="Name" class="formSignUp" id="nameSignUp">
+                <span class='errors' id="errorName"></span>
+                <input type="text" placeholder="Last name" class="formSignUp" id="lastSignUp">
+                <span class='errors' id="errorLastName"></span>
+                <input type="text" placeholder="DNI" class="formSignUp" id="dniSignup">
+                <span class='errors' id="errorDNI"></span>
+                <input type="text" placeholder="Phone number" class="formSignUp" id="phoneSignUp"> 
+                <span class='errors' id="errorPhone"></span>
+                <input type="text" placeholder="City" class="formSignUp" id="citySignUp">  
+                <span class='errors' id="errorCity"></span>
+                <input type="text" placeholder="Address" class="formSignUp" id="addressSignUp">
+                <span class='errors' id="errorAddress"></span>
+            </div>
+            <div  class="divsSU">
+                <input type="text" placeholder="Postal Code" class="formSignUp" id="postalSignUp">
+                <span class='errors' id="errorCode"></span>
+                <label>Date of birth<input type="date" placeholder="Date of birth" class="formSignUp" id="dateSignUp"></label>
+                <span class='errors' id="errorDate"></span>
+                <input type="text" placeholder="Email" class="formSignUp" id="emailSignUp">
+                <span class='errors' id="errorEmail"></span>
+                <input type="password" placeholder="Password" class="formSignUp" id="passwordSignUp">
+                <span class='errors' id="errorPassword"></span>
+                <input type="password" placeholder=" Repeat password" class="formSignUp" id="repeatSignUp">
+                <span class='errors' id="errorRepeat"></span>
+                
+            </div>
+            <input type="button" value="Continue" class="formSignUp" id="buttonSU">
+            <p  class="formSignUp" id="pSignUp"></p>
+        </form>
+    </main>
+     <footer>
+        <div class="footer-pictures">
+            <img src="../../assets/imgs/Vector111foot.svg" alt="profile" class="footer-picture" id="facebook">
+            <img src="../../assets/imgs/Vectorfooter-1.svg" alt="login" class="footer-picture">
+            <img src= "../../assets/imgs/Vectorfooter-2.svg"alt="info" class="footer-picture">
+         </div>
+        <p class="textfooter">© MEGA ROCKET SA 2023</p>
+    </footer>
+</body>
+</html>
