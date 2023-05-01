@@ -1,4 +1,5 @@
 window.onload = function () {
+
   var formLogIn = document.getElementById("formLogIn");
 
   //variables de input
@@ -35,58 +36,61 @@ window.onload = function () {
     if (!hasLetter || !hasNumber) {
       errorPassword.classList.remove("errors");
       errorPassword.classList.add("message");
-      errorPassword.textContent =
-        "This field needs at least one letter, and at least one number \n";
+      errorPassword.textContent = "This field needs at least one letter, and at least one number \n";
     }
     if (password.length < 8 || password.length > 30) {
       errorPassword.classList.remove("errors");
       errorPassword.classList.add("message");
-      errorPassword.textContent +=
-        "This field needs to have between 8 and 30 characters";
+      errorPassword.textContent += "This field needs to have between 8 and 30 characters";
+    }
+    return !(!hasLetter || !hasNumber || password.length < 8 || password.length > 30);
     }
 
-    return !(
-      !hasLetter ||
-      !hasNumber ||
-      password.length < 8 ||
-      password.length > 30
-    );
-  }
+    emailLogIn.onfocus = function () {
+      errorEmail.classList.remove("message");
+      errorEmail.classList.add("errors");
+    };
 
-  function isEmailValid() {
-    var email = emailLogIn.value;
-    var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    var emailValid = emailExpression.test(email);
+    emailLogIn.addEventListener("blur", isEmailValid);
 
-    if (!emailValid) {
-      errorEmail.classList.remove("errors");
-      errorEmail.classList.add("message");
-      errorEmail.textContent = "The email format is not valid \n";
-    }
-
-    return emailValid;
-  }
-
-  
-
-  button.addEventListener("click", function () {
-    if (isEmailValid() && isPassWordValid()) {
+    function isEmailValid() {
       var email = emailLogIn.value;
-      var password = passwordLogIn.value;
-      alert(`Email: ${emailLogIn.value} Password: ${passwordLogIn.value}`);
-      var url='https://api-rest-server.vercel.app/login'+email
-    } else {
-      var errors = errorEmail.textContent + errorPassword.textContent;
-      alert(errors);
+      var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+      var emailValid = emailExpression.test(email);
+
+      if (!emailValid) {
+        errorEmail.classList.remove("errors");
+        errorEmail.classList.add("message");
+        errorEmail.textContent = "The email format is not valid \n";
+      }
+      return emailValid;
     }
-  });
 
-  emailLogIn.onfocus = function () {
-    errorEmail.classList.remove("message");
-    errorEmail.classList.add("errors");
-  };
+    button.addEventListener("click", function () {
+      if (isEmailValid() && isPassWordValid()) {
+        alert(`Email: ${emailLogIn.value} Password: ${passwordLogIn.value}`);
+      } else {
+        var errors = errorEmail.textContent + errorPassword.textContent;
+        alert(errors);
+      }
 
-  emailLogIn.addEventListener("blur", isEmailValid);
+      var url='https://api-rest-server.vercel.app/login';
+      var password=passwordLogIn.value;
+      var email= emailLogIn.value;
+      var params = `?email=${email}&password=${password}`;
 
-  //
+      fetch(url+ params)
+      .then(function(response) {
+          return response.json();
+      })
+      .then((data)=>{
+          if (data.success===false) {
+          throw data.msg ;
+          }
+        alert(`The request was successful ${data.msg}`);
+      })
+      .catch((error)=>{
+          alert(`Error: ${error}`)
+      });
+    });
 };
