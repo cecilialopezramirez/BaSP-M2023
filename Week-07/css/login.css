@@ -1,9 +1,10 @@
 main {
-    display: flex;
     justify-content: center;
     font-family: Roboto;
     text-align: center;
     border-bottom: 1px solid #000000;
+    margin-left: 25%;
+    margin-right:25%
 }
 
 .formLogin {
@@ -16,6 +17,7 @@ main {
 form {
     background-color: #FDFBFB;
     padding: 8%;
+    margin-top: 5%;
 }
 
 input[type="checkbox"] {
@@ -33,7 +35,7 @@ input[type="text"], input[type="password"] {
 }
 
 h2{
-    margin-bottom: 25%;
+    margin-bottom: 5%;
 }
 
 #button {
@@ -58,4 +60,15 @@ label {
     display: block;
     color: red;
     font-family: Roboto;
+    font-size:small;
+  }
+
+  
+  label, input, textarea {
+    width: 25%;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
   }
