@@ -479,15 +479,14 @@ window.onload = function () {
       console.log("parseduserdata", parsedUserData);
       nameSignUp.value = parsedUserData.name;
       lastName.value = parsedUserData.lastName;
-      dateSignUp = parsedUserData.dob;
-      phoneSignUp = parsedUserData.phone;
-      addressSignUp= parsedUserData.address;
-      citySignUp = parsedUserData.city;
-      postalSignUp = parsedUserData.zip;
-      emailSignUp = parsedUserData.email;
-      passwordSignUp = parsedUserData.password;
+      dateSignUp.value = parsedUserData.dob;
+      phoneSignUp.value = parsedUserData.phone;
+      addressSignUp.value= parsedUserData.address;
+      citySignUp.value= parsedUserData.city;
+      postalSignUp.value = parsedUserData.zip;
+      emailSignUp.value = parsedUserData.email;
+      passwordSignUp.value = parsedUserData.password;
     }
-
 
   });
 }
