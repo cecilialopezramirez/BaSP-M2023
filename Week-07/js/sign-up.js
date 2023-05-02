@@ -1,6 +1,5 @@
 window.onload=function(){
-//variables de input 
-
+//input variables
 var emailSignUp= document.getElementById('emailSignUp');
 var nameSignUp= document.getElementById('nameSignUp');
 var passwordSignUp= document.getElementById('passwordSignUp');
@@ -13,9 +12,7 @@ var postalSignUp= document.getElementById('postalSignUp');
 var dateSignUp= document.getElementById('dateSignUp');
 var repeatSignUp= document.getElementById('repeatSignUp');
 
-
-//variables span
-
+//span variables
 var errorEmail= document.getElementById('errorEmail');
 var errorPassword= document.getElementById('errorPassword');
 var errorName= document.getElementById('errorName');
@@ -28,11 +25,10 @@ var errorCode= document.getElementById('errorCode');
 var errorDate= document.getElementById('errorDate'); 
 var errorRepeat= document.getElementById('errorRepeat'); 
 
- //boton
+ //button
  var button = document.getElementById("buttonSU");
 
-
-//Password
+//Password validation and events
 passwordSignUp.onfocus = function () {
     errorPassword.classList.remove("message");
     errorPassword.classList.add("errors");
@@ -64,7 +60,6 @@ passwordSignUp.onfocus = function () {
       errorPassword.textContent +=
         "This field needs to have between 8 and 30 characters \n";
     }
-
     return !(
       !hasLetter ||
       !hasNumber ||
@@ -73,8 +68,7 @@ passwordSignUp.onfocus = function () {
     );
   }
 
-//Repeat Password
-
+//Repeat password validation and events
 repeatSignUp.onfocus = function () {
     errorRepeat.classList.remove("message");
     errorRepeat.classList.add("errors");
@@ -95,8 +89,7 @@ return !(
 )
 };
 
-//Email
-
+//Email validation and events
 emailSignUp.onfocus = function () {
     errorEmail.classList.remove("message");
     errorEmail.classList.add("errors");
@@ -118,11 +111,7 @@ function isEmailValid() {
     return emailValid;
   }
 
-
-
-
-//Nombre
-
+//Name validation and events
 nameSignUp.onfocus = function () {
     errorName.classList.remove("message");
     errorName.classList.add("errors");
@@ -154,17 +143,14 @@ nameSignUp.onfocus = function () {
         errorName.classList.add("message");
         errorName.textContent += " This field needs to have between 3 and 20 characters \n";
     }
-
     return !(
         !nameValid ||
         name.length < 3 ||
         name.length > 20
-      );
-        
+      );        
 }
 
-//Apellido
-
+//Last name validation and events
 lastSignUp.onfocus = function () {
     errorLastName.classList.remove("message");
     errorLastName.classList.add("errors");
@@ -204,8 +190,7 @@ lastSignUp.addEventListener("blur", isLastValid);
       );     
 }
 
-//DNI
-
+//DNI validation and events
 dniSignUp.onfocus = function () {
     errorDNI.classList.remove("message");
     errorDNI.classList.add("errors");
@@ -236,8 +221,7 @@ function isDniValid() {
       ) ;       
 }
 
-//Telefono
-
+//Phone validation and events
 phoneSignUp.onfocus = function () {
     errorPhone.classList.remove("message");
     errorPhone.classList.add("errors");
@@ -263,15 +247,13 @@ phoneSignUp.addEventListener("blur", isPhoneValid);
         errorPhone.classList.add("message");
         errorPhone.textContent = "This field must only contain numbers and must have exactly 10 digits \n";
     }
-
     return !(
         !phoneValid ||
         phone.length !== 10
     ) ;       
 }
 
-//Codigo postal
-
+//Zip code validation and events
 postalSignUp.onfocus = function () {
     errorCode.classList.remove("message");
     errorCode.classList.add("errors");
@@ -304,7 +286,7 @@ function isPostalValid() {
     ) ;        
 }
 
-//Direccion
+//Address validation and events
 addressSignUp.onfocus = function () {
     errorAddress.classList.remove("message");
     errorAddress.classList.add("errors");
@@ -347,8 +329,7 @@ function isAddressValid() {
     ) ;       
 }
 
-//Localidad
-
+//City validation and events
 citySignUp.onfocus = function () {
     errorCity.classList.remove("message");
     errorCity.classList.add("errors");
@@ -376,7 +357,7 @@ function isCityValid() {
     if (city.length < 3 ) {
         errorCity.classList.remove("errors");
         errorCity.classList.add("message");
-        errorCity.textContent += " This field must have more than three characters \n";
+        errorCity.textContent += "This field must have more than three characters \n";
     }
     return !(
         !cityValid ||
@@ -384,8 +365,7 @@ function isCityValid() {
     ) ;      
 }
 
-//Fecha
-
+//Date of birth validation and events 
 dateSignUp.onfocus = function () {
     errorDate.classList.remove("message");
     errorDate.classList.add("errors");
@@ -393,26 +373,65 @@ dateSignUp.onfocus = function () {
 
 dateSignUp.addEventListener("blur", isDateValid);
   
-function isDateValid() {
-    var date = Date.parse(dateSignUp.value);
-    var dateValid = true;
-   
-    if (isNaN(date)) {
-      dateValid = false;
-      errorDate.classList.remove("errors");
-      errorDate.classList.add("message");
-      errorDate.textContent += "The format of the date is not valid \n";
-    }
-  
 
+function isDateValid() {
+  var birthDate = new Date(dateSignUp.value);
+  var currentDate = new Date();
+  var minAge = 15;
+  var dateFormatValid=true;
+  var olderThanFifteen=true;
+  if (isNaN(birthDate) || birthDate >= currentDate) {
+    dateFormatValid=false;
+    errorDate.classList.remove("errors");
+    errorDate.classList.add("message");
+    errorDate.textContent=
+    "The date format is invalid\n"
   }
-  
+  var age = currentDate.getFullYear() - birthDate.getFullYear();
+  var monthDiff = currentDate.getMonth() - birthDate.getMonth();
+  if (monthDiff < 0 || (monthDiff === 0 && currentDate.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  if (age < minAge) {
+    olderThanFifteen=false;
+    errorDate.classList.remove("errors");
+    errorDate.classList.add("message");
+    errorDate.textContent=
+    " You should be older than 15 to register\n"
+  }
+  return !(
+    !dateFormatValid||
+    !olderThanFifteen
+) ;     
+}
+
+function dateConverter(date){
+  var inputDate = new Date(date);
+    var month = inputDate.getMonth();
+    month++;
+    if (month < 10) {
+        month = '0' + month;
+    }
+    month = month.toString();
+    var day = inputDate.getDate();
+    day++;
+    if (day < 10) {
+        day = '0' + day;
+    }
+    day = day.toString();
+    var year = inputDate.getFullYear().toString();
+    date = month + '/' + day + '/' + year;
+    return date;
+}
+
+  //Button events
   button.addEventListener("click", function () {
     if (isEmailValid() && isPassWordValid() && isRepeatValid() && isAddressValid() && isCityValid()
-    && isDniValid() && isLastValid() && isNameValid() && isPhoneValid() && isPostalValid()) {
+    && isDniValid() && isLastValid() && isNameValid() && isPhoneValid() && isPostalValid() &&isDateValid) {
       alert((`Name: ${nameSignUp.value} Last Name: ${lastSignUp.value} Dni: ${dniSignUp.value}
       Phone number: ${phoneSignUp.value} City: ${citySignUp.value} Address: ${addressSignUp.value}
-      Postal code: ${postalSignUp.value} 
+      Zip code: ${postalSignUp.value} 
+      Date: ${dateSignUp.value}
       Email: ${emailSignUp.value} Password: ${passwordSignUp.value}
       Repeat password: ${repeatSignUp.value} `));
     } else {
@@ -421,9 +440,43 @@ function isDateValid() {
       + errorLastName.textContent + errorName.textContent +errorPhone.textContent;
       alert(errors);
     }
+
+    var name = nameSignUp.value;
+    var lastName = lastSignUp.value;
+    var dni = dniSignUp.value;
+    var dob= dateConverter(dateSignUp.value);
+    var phone= phoneSignUp.value;
+    var address= addressSignUp.value;
+    var city= citySignUp.value;
+    var zip=postalSignUp.value;
+    var email= emailSignUp.value;
+    var password= passwordSignUp.value;
+    var url='https://api-rest-server.vercel.app/signup'
+    var params = `?name=${name}&lastName=${lastName}&dni=${dni}&dob=${dob}&phone=${phone}&address=${address}&city=${city}&zip=${zip}&email=${email}&password=${password}`
+
+    fetch(url+ params)
+      .then(function(response) {
+          return response.json();
+      })
+      .then((data)=>{
+          if (data.success===false) {
+          throw data.msg ;
+          }
+        localStorage.setItem('name', name);
+        localStorage.setItem('lastName', lastName);
+        localStorage.setItem('dni',dni);
+        localStorage.setItem('dob', dob);
+        localStorage.setItem('phone', phone);
+        localStorage.setItem('address', address);
+        localStorage.setItem('city', city);
+        localStorage.setItem('zip', zip);
+        localStorage.setItem('email', email);
+        localStorage.setItem('password', password)
+        alert(`The request was successful ${data.msg}`);
+      })
+      .catch((error)=>{
+          alert(`Error: ${error.msg}`)
+      });
   });
-
- 
-
 }
 

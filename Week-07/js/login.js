@@ -1,19 +1,18 @@
 window.onload = function () {
-
   var formLogIn = document.getElementById("formLogIn");
 
-  //variables de input
+  //input variables
   var emailLogIn = document.getElementById("emailLogIn");
   var passwordLogIn = document.getElementById("passwordLogIn");
 
-  //variables span
-
+  //span variables
   var errorEmail = document.getElementById("errorEmail");
   var errorPassword = document.getElementById("errorPassword");
 
-  //boton
+  //button
   var button = document.getElementById("button");
 
+  // password validation and events
   passwordLogIn.onfocus = function () {
     errorPassword.classList.remove("message");
     errorPassword.classList.add("errors");
@@ -46,6 +45,7 @@ window.onload = function () {
     return !(!hasLetter || !hasNumber || password.length < 8 || password.length > 30);
     }
 
+    //email validation and events
     emailLogIn.onfocus = function () {
       errorEmail.classList.remove("message");
       errorEmail.classList.add("errors");
@@ -66,6 +66,7 @@ window.onload = function () {
       return emailValid;
     }
 
+    //button events
     button.addEventListener("click", function () {
       if (isEmailValid() && isPassWordValid()) {
         alert(`Email: ${emailLogIn.value} Password: ${passwordLogIn.value}`);

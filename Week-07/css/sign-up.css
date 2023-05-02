@@ -1,47 +1,64 @@
 main {
-    display: flex;
     justify-content: center;
     font-family: Roboto;
     text-align: center;
     border-bottom: 1px solid #000000;
+    margin-left: 25%;
+    margin-right:25%
 }
 
 .divsSU {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 form {
     background-color: #FDFBFB;
-    padding: 8%;
+    padding: 18%;
 }
 
 .formSignUp {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    width: 70%;
 }
 
+.labels {
+   display:flex;
+   flex-direction: row;
+   justify-content: center;
+  
+}
+
+label {
+    margin-right: 20px;
+    margin-top: 5%;
+    width: 50%;
+   text-align:left;
+   align-self: center;
+   font-size: medium;
+   color: #49A37B;
+}
 
 h2{
-    margin-bottom: 25%;
-}
-
-input[type="date"] {
-   justify-content: center;
-    margin: top 10%;
-   width: 97%;
+    margin-bottom: 3%;
 }
 
 #buttonSU {
-    width: 100%;
-    margin-top: 15%;
+    width: 70%;
+    margin-top: 30px;
+    margin-left:20%;
     padding: 10px 24px;
     background: #49A37B;
     border-radius: 5px;
     border-color: #49A37B; 
     color: aliceblue;
+    text-align: center;
 }
 
 .errors {
@@ -52,4 +69,19 @@ input[type="date"] {
     display: block;
     color: red;
     font-family: Roboto;
+    font-size:small;
+  }
+
+  label, input, textarea {
+    width: 25%;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  input {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
   }

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mega Rocket</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link href="../css/header.css" rel="stylesheet">
         <link href="../css/sign-up.css" rel="stylesheet">
@@ -30,29 +30,29 @@
         <form class="firstForm">
             <h2>Register</h2>
             <div class="divsSU">
-                <input type="text" placeholder="Name" class="formSignUp" id="nameSignUp">
+                <div class="labels"><label for="name">Name:</label><input type="text" class="formSignUp" id="nameSignUp"></div>
                 <span class='errors' id="errorName"></span>
-                <input type="text" placeholder="Last name" class="formSignUp" id="lastSignUp">
+                <div class="labels"><label for="lastSignUp"> Last name:</label><input type="text" class="formSignUp" id="lastSignUp"></div>
                 <span class='errors' id="errorLastName"></span>
-                <input type="text" placeholder="DNI" class="formSignUp" id="dniSignup">
+                <div class="labels"><label for="dniSignup"> DNI:</label><input type="text"  class="formSignUp" id="dniSignup"></div>
                 <span class='errors' id="errorDNI"></span>
-                <input type="text" placeholder="Phone number" class="formSignUp" id="phoneSignUp"> 
+                <div class="labels"><label for="phoneSignUp">Phone:</label><input type="text" class="formSignUp" id="phoneSignUp"> </div>
                 <span class='errors' id="errorPhone"></span>
-                <input type="text" placeholder="City" class="formSignUp" id="citySignUp">  
+                <div class="labels"><label for="citySignUp"> City:</label><input type="text"  class="formSignUp" id="citySignUp"></div>
                 <span class='errors' id="errorCity"></span>
-                <input type="text" placeholder="Address" class="formSignUp" id="addressSignUp">
+                <div class="labels"><label for="addressSignUp">Address:</label><input type="text"  class="formSignUp" id="addressSignUp"></div>
                 <span class='errors' id="errorAddress"></span>
             </div>
             <div  class="divsSU">
-                <input type="text" placeholder="Postal Code" class="formSignUp" id="postalSignUp">
+                <div class="labels"><label for="postalSignUp"> Zip code:</label><input type="text"  class="formSignUp" id="postalSignUp"></div>
                 <span class='errors' id="errorCode"></span>
-                <label>Date of birth<input type="date" placeholder="Date of birth" class="formSignUp" id="dateSignUp"></label>
+                <div class="labels"><label for="dateSignUp">Date of birth:</label><input type="date"  class="formSignUp" id="dateSignUp"></div>
                 <span class='errors' id="errorDate"></span>
-                <input type="text" placeholder="Email" class="formSignUp" id="emailSignUp">
+                <div class="labels"><label for="emailSignUp">Email:</label><input type="text" class="formSignUp" id="emailSignUp"></div>
                 <span class='errors' id="errorEmail"></span>
-                <input type="password" placeholder="Password" class="formSignUp" id="passwordSignUp">
+                <div class="labels"><label for="passwordSignUp">Password:</label><input type="password" class="formSignUp" id="passwordSignUp"></div>
                 <span class='errors' id="errorPassword"></span>
-                <input type="password" placeholder=" Repeat password" class="formSignUp" id="repeatSignUp">
+                <div class="labels"><label for="repeatSignUp">Repeat password:</label><input type="password" class="formSignUp" id="repeatSignUp"></div>
                 <span class='errors' id="errorRepeat"></span>
                 
             </div>
